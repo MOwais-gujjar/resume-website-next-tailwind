@@ -10,13 +10,15 @@ import {
 export default function Home() {
   return (
     <>
-      <Wrapper>
-        <Header />
-        <Section />
-        <Skills />
-        <Projects />
-        <Footer />
-      </Wrapper>
+      <div>
+        <Wrapper>
+          <Header />
+          <Section />
+          <Skills />
+          <Projects />
+          <Footer />
+        </Wrapper>
+      </div>
     </>
   );
 }
