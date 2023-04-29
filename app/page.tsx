@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 import {
   Header,
   Section,
@@ -7,18 +7,17 @@ import {
   Footer,
   Wrapper,
 } from "./Components";
+import React, { useState } from "react";
 export default function Home() {
   return (
     <>
-      <div>
-        <Wrapper>
-          <Header />
-          <Section />
-          <Skills />
-          <Projects />
-          <Footer />
-        </Wrapper>
-      </div>
+      <Wrapper>
+        <Header />
+        <Section />
+        <Skills />
+        <Projects />
+        <Footer />
+      </Wrapper>
     </>
   );
 }

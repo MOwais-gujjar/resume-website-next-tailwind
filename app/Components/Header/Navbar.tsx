@@ -2,14 +2,10 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import logo from "../../../public/logo.png";
-import Link from "next/link";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
-import { CiDark, CiLight } from "react-icons/ci";
 import Button from "../layout/Button";
-const Navbar = () => {
+const Navbar = (prop: any) => {
   const [toggle, setToggle] = useState(false);
-  const [darkLight, setDarkLight] = useState(false);
-
   const nav = [
     { name: "Home", ulLink: "/" },
     { name: "Projects", ulLink: "/" },
@@ -18,55 +14,48 @@ const Navbar = () => {
   ];
   return (
     <>
-      <div className="flex justify-between sticky top-0 items-center md:px-5 py-2">
+      <div
+        className={`flex justify-between sticky top-0 items-center py-2 bg-white shadow-lg shadow-gray-200`}
+      >
+        <Image
+          src={logo}
+          alt={"Muhammad_Awais"}
+          width={100}
+          height={100}
+          className=" ml-3 rounded-full shadow-lg cursor-pointer"
+        />
         {/* Toggle Effect */}
         <div
-          className="md:hidden ml-5 hover:scale-105"
+          className="md:hidden mr-3 hover:scale-105"
           onClick={() => setToggle(!toggle)}
         >
           {toggle ? (
-            <AiOutlineClose className="text-white bg-black" />
+            <div className="shadow-lg p-2 rounded-full">
+              <AiOutlineClose />
+            </div>
           ) : (
-            <AiOutlineMenu className="text-black bg-white shadow-emerald-200" />
+            <div className=" shadow-lg p-2 rounded-full">
+              <AiOutlineMenu />
+            </div>
           )}
         </div>
         <ul
-          className={`flex flex-col items-start absolute z-[-1] bg-[#0099FF]/50 w-full mr-4 p-10  gap-5 font-semibold text-white
-           md:static md:flex-row md:items-center md:px-2 md:w-auto  md:z-auto md:mr-0 md:gap-10 md:bg-inherit md:p-3 md:text-black 
-          ${toggle ? "top-20" : "top-[-490px]"}`}
+          className={`flex flex-col items-start absolute z-[-1] bg-white/60 w-full mr-4 p-20 tracking-wide ease-in duration-105 mt-5 gap-5 font-semibold
+           md:static md:flex-row md:ml-auto md:items-center uppercase md:mr-[60px] md:w-auto md:z-auto md:gap-10 md:mb-1 md:p-0
+          ${toggle ? "top-[95px]" : "top-[-490px]"}`}
         >
           {nav.map((m) => (
             <li
               key={m.ulLink}
-              className=" cursor-pointer hover:text-black/70 scale-105 duration-300 md:hover:text-[#0099FF] "
+              className=" cursor-pointer hover:border-b-4 hover:rounded-full border-[#0099FF] ease-in duration-300 "
             >
               {m.name}
             </li>
           ))}
         </ul>
 
-        <div>
-          <Image
-            src={logo}
-            alt={"Muhammad_Awais"}
-            className=" rounded-full w-20 h-20 cursor-pointer"
-          />
-        </div>
-        <div className="flex  gap-5 items-center">
-          <div
-            onClick={() => {
-              setDarkLight(!darkLight);
-            }}
-          >
-            {darkLight ? (
-              <CiDark className="w-8 h-8 cursor-pointer hover:scale-105 hover:duration-300 " />
-            ) : (
-              <CiLight className="w-8 h-8 cursor-pointer hover:scale-105 hover:duration-300 " />
-            )}
-          </div>
-          <div className="md:flex hidden">
-            <Button text={"Resume"} />
-          </div>
+        <div className="md:flex hidden mr-3">
+          <Button text={"Resume"} />
         </div>
       </div>
     </>
