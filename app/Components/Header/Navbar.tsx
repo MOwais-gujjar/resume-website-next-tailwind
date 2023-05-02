@@ -14,9 +14,7 @@ const Navbar = (prop: any) => {
   ];
   return (
     <>
-      <div
-        className={`flex justify-between sticky top-0 items-center py-2 bg-white shadow-lg shadow-gray-200`}
-      >
+      <div className={`flex justify-between items-center py-2`}>
         <Image
           src={logo}
           alt={"Muhammad_Awais"}

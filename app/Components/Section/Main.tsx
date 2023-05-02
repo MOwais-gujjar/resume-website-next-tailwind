@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import heroSection from "../../assets/heroSection.png";
-import { TiSocialFacebook, TiSocialLinkedin } from "react-icons/Ti";
+import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { BsWhatsapp, BsGithub } from "react-icons/bs";
 import Button from "../layout/Button";
 const Main = () => {
@@ -27,19 +27,19 @@ const Main = () => {
             {/* Links */}
             <div className="flex justify-center item-center py-3 gap-5">
               <div className=" rounded-full shadow-lg shadow-gray-500 hover:scale-105 cursor-pointer duration-500 p-4">
-                <TiSocialFacebook size={20} />
+                <FaFacebookF size={20} />
               </div>
               <div className=" rounded-full shadow-lg shadow-gray-500 hover:scale-105 cursor-pointer duration-500 p-4">
                 <BsWhatsapp size={20} />
               </div>
               <div className=" rounded-full shadow-lg shadow-gray-500 hover:scale-105 cursor-pointer duration-500 p-4">
-                <TiSocialLinkedin size={20} />
+                <FaLinkedinIn size={20} />
               </div>
               <div className=" rounded-full shadow-lg shadow-gray-500 hover:scale-105 cursor-pointer duration-500 p-4">
                 <BsGithub size={20} />
               </div>
             </div>
-            <div className="py-4">
+            <div className="py-4 mb-10">
               <Button text={"Read more"} />
             </div>
           </div>
