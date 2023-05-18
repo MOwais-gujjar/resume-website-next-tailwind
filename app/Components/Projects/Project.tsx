@@ -1,37 +1,49 @@
-import airbnbImage from "../../assets/Projects/airbnb.jpg";
-import youTubeImage from "../../assets/Projects/youTube.jpg";
+import lendingImage from "../../assets/Projects/lending-page.jpg";
+import interiorImage from "../../assets/Projects/interior-design.jpg";
 import constructImage from "../../assets/Projects/construct.jpg";
-import leetscodeImage from "../../assets/Projects/leetscode.jpg";
+import hotelImage from "../../assets/Projects/hotel.jpg";
+import metaverseImage from "../../assets/Projects/metaverse.jpg";
+import vrImage from "../../assets/Projects/vr.jpg";
 import ProjectItems from "./projectItems";
 const Project = () => {
   return (
     <>
-      <div className=" mt-20 h-screen">
+      <div className=" mt-10 h-screen">
         <div className=" ml-10">
           <h1>Projects</h1>
           <h2 className="text-sm font-medium tracking-widest text-black/60 ml-7">
             What I have Built{" "}
           </h2>
         </div>
-        <div className="grid md:grid-cols-2 gap-10 mx-4 my-4">
+        <div className="grid md:grid-cols-3 gap-10 mx-20">
           <ProjectItems
-            title="Airbnb Clone App"
-            backgroundImage={airbnbImage}
-            imageURL="/airbnb.com"
+            title="Home Design"
+            backgroundImage={lendingImage}
+            imageURL="/"
           />
           <ProjectItems
-            title="Construct Web App"
+            title="Construct"
             backgroundImage={constructImage}
             imageURL="/"
           />
           <ProjectItems
-            title="You Tube Clone App"
-            backgroundImage={youTubeImage}
+            title="Hotel & Resort"
+            backgroundImage={hotelImage}
             imageURL="/"
           />
           <ProjectItems
-            title="LeetsCode Clone App"
-            backgroundImage={leetscodeImage}
+            title="Interior Design"
+            backgroundImage={interiorImage}
+            imageURL="/"
+          />
+          <ProjectItems
+            title="Virtual Reality"
+            backgroundImage={vrImage}
+            imageURL="/"
+          />
+          <ProjectItems
+            title="Metaverse Web"
+            backgroundImage={metaverseImage}
             imageURL="/"
           />
           {/* 2 */}

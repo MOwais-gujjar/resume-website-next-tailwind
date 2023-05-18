@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 export default function ProjectItems({
@@ -8,11 +7,11 @@ export default function ProjectItems({
 }: any) {
   return (
     <>
-      <div className="relative h-auto w-full shadow-xl shadow-gray-400 rounded-lg group hover:bg-gradient-to-b from-[#0099FF]/50 to-[#0099FF]/70 hover:h-0 hover:rounded-lg hover:pb-[75%]">
+      <div className="relative h-auto w-full shadow-xl rounded-lg group hover:bg-gradient-to-b from-[#0099FF]/50 to-[#0099FF]/70 hover:h-0 hover:pb-[66%]">
         <Image
           src={backgroundImage}
           alt="airbnb"
-          width={600}
+          width={500}
           height={600}
           className="group-hover:opacity-10 rounded-xl"
         />
@@ -21,7 +20,7 @@ export default function ProjectItems({
             <h1 className="text-center font-body text-black/80 tracking-wider">
               {title}
             </h1>
-            <h4 className="text-center font-body text-lg font-semibold text-black tracking-wider">
+            <h4 className="text-center font-body text-md font-semibold text-black tracking-wider">
               fully Functional
             </h4>
             <Link href={imageURL}>

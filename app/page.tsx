@@ -5,6 +5,7 @@ import {
   Skills,
   Footer,
   Wrapper,
+  Contact,
 } from "./Components";
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Section />
         <Skills />
         <Projects />
+        <Contact />
         <Footer />
       </Wrapper>
     </>
